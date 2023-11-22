@@ -1,0 +1,151 @@
+@use "./utilities/colors" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  height: 100vh;
+  background-color: $very-dark-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zmiana {
+  padding: 100px;
+  position: absolute;
+  top: 10px;
+}
+
+.wrapper {
+  padding: 20px;
+  width: 300px;
+  background-image: linear-gradient($dark-blue, hsl(224, 18%, 12%));
+  border-radius: 15px;
+
+  .select-container {
+    display: block;
+    .star-circle {
+      width: 36px;
+      height: 36px;
+      background-color: hsl(212, 14%, 22%);
+      opacity: 0.8;
+      border-radius: 50%;
+      margin-bottom: 20px;
+
+      .star {
+        position: relative;
+        left: 10px;
+        top: 10px;
+        scale: 0.8;
+      }
+    }
+
+    .question {
+      color: $white;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .question-extension {
+      color: $medium-grey;
+      font-size: 12px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .numbers {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .number {
+        width: 40px;
+        line-height: 40px;
+        background-color: hsl(210, 15%, 18%);
+        color: $medium-grey;
+        font-weight: bold;
+        border: none;
+        border-radius: 50%;
+        transition: color 0.3s, background-color 0.3s;
+        &:hover {
+          background-color: $light-grey;
+          color: $white;
+          cursor: pointer;
+        }
+        &:focus {
+          background-color: $orange;
+          color: $white;
+          outline: none;
+        }
+      }
+    }
+
+    .submit {
+      margin-top: 20px;
+      padding: 12px;
+      margin-bottom: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 20px;
+      background-color: $orange;
+      color: $white;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: color 0.3s, background-color 0.3s;
+      &:hover {
+        color: $orange;
+        background-color: $white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .response-container {
+    padding: 13px 5px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    .response-picture {
+      width: 130px;
+      height: 86px;
+    }
+
+    .info {
+      margin-top: 25px;
+      padding: 7px 20px;
+      background-color: hsl(210, 15%, 18%);
+      border-radius: 20px;
+      opacity: 0.7;
+
+      .info-text {
+        position: relative;
+        top: 2px;
+        color: $orange;
+        font-size: 12px;
+      }
+    }
+
+    .thank-you {
+      margin-top: 20px;
+      color: $white;
+      font-size: 22px;
+    }
+
+    .appreciation {
+      margin-top: 10px;
+      color: $medium-grey;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+  }
+}
